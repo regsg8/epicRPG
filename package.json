@@ -1,0 +1,19 @@
+{
+  "name": "epicrpg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reg Garrett",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  }
+}
