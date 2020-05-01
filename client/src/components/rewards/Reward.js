@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Landing = () => {
-   
+const Reward = () => {
     return (
         <div>
-            Landing Filler
+            Reward Filler
         </div>
     )
 }
 
-export default Landing
+export default Reward

@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Landing = () => {
-   
+const Jar = () => {
     return (
         <div>
-            Landing Filler
+            Jar Filler
         </div>
     )
 }
 
-export default Landing
+export default Jar

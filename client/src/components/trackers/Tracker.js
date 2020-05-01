@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Landing = () => {
-   
+const Tracker = () => {
     return (
         <div>
-            Landing Filler
+            Tracker Filler
         </div>
     )
 }
 
-export default Landing
+export default Tracker

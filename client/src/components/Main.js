@@ -1,21 +1,23 @@
 import React from 'react';
-import Landing from './Landing';
+import TrackerBoard from './trackers/TrackerBoard';
+import JarBoard from './jars/JarBoard';
+import RewardBoard from './rewards/RewardBoard';
 
 const Main = () => {
     const styles = {
         main: {
-            position: 'fixed',
-            bottom: '42px',
-            top: '42px',
-            width: '100%',
+            height: '100%',
             padding: '10px',
-            border: '2px green solid'
+            border: '2px green solid',
+            display: 'flex',
+            justifyContent: 'space-between'
         }
     }
     return (
         <div style={styles.main}>
-            Main Filler
-            <Landing />
+           <TrackerBoard />
+           <JarBoard />
+           <RewardBoard />
         </div>
     )
 }

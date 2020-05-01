@@ -10,12 +10,13 @@ const path = require('path');
 
 //Global middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 //Connect to DB
 mongoose.connect(
-    process.env.MONGDODB_URI || 'mongodb://localhost:27017/epicRPG',
+    process.env.MONGDODB_URI || 'mongodb://localhost:27017/tracker',
     { useNewUrlParser: true },
     () => console.log("Connected to the DB")
 );
@@ -23,6 +24,13 @@ mongoose.connect(
 //Routes
 
 //Error Handler
+app.use((err, req, res, next) => {
+    console.log(err);
+    if (err.name === "UnauthorizedError") {
+        res.status(err.status);
+    }
+    return res.send({ errMsg: err.message });
+});
 
 //Heroku Deployment
 app.get("*", (req, res) => {
