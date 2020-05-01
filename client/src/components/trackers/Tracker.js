@@ -1,10 +1,12 @@
 import React from 'react';
+import { StyledTracker } from '../../elements/index';
 
-const Tracker = () => {
+const Tracker = (props) => {
     return (
-        <div>
-            Tracker Filler
-        </div>
+        <StyledTracker>
+            <div>{props.name}</div>
+            <div>{props.points}</div>
+        </StyledTracker>
     )
 }
 

@@ -16,7 +16,6 @@ const trackerSchema = new Schema({
     jar: {
         type: Schema.Types.ObjectId,
         ref: "Jar",
-        required: true
     },
     created: {
         type: Date,

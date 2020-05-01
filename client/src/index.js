@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import DataProvider from './context/DataProvider';
-export const { Consumer, Provider } = React.createContext();
 import './index.css';
 import App from './App';
+export const { Consumer, Provider } = React.createContext();
 
 
 ReactDOM.render(

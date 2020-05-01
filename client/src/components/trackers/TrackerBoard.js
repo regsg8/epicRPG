@@ -1,13 +1,19 @@
 import React from 'react';
 import { StyledBoard } from '../../elements/index';
 import Tracker from './Tracker';
+import { Consumer } from '../../index';
 
-const TrackerBoard = () => {
-    return (
+const TrackerBoard = (props) => {
+
+    const mappedTrackers = props.trackers.map((item) => {
+        return (
+            <Tracker {...item} key={item._id} />
+        )
+    });
+
+    return ( 
         <StyledBoard>
-            <Tracker />
-            <Tracker />
-            <Tracker />
+            {mappedTrackers[0] ? mappedTrackers : "No available Trackers" }
         </StyledBoard>
     )
 };
