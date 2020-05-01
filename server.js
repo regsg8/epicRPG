@@ -16,8 +16,10 @@ app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 //Connect to DB
 mongoose.connect(
-    process.env.MONGDODB_URI || 'mongodb://localhost:27017/tracker',
-    { useNewUrlParser: true },
+    process.env.MONGDODB_URI || 'mongodb://localhost:27017/tracker',{
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
     () => console.log("Connected to the DB")
 );
 
