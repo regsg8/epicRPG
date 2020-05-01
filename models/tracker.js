@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const rewardSchema = new Schema({
+const trackerSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -10,7 +10,7 @@ const rewardSchema = new Schema({
         type: Number,
         required: true
     },
-    timesClaimed: {
+    timesCompleted: {
         type: Number
     },
     jar: {
@@ -24,4 +24,4 @@ const rewardSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model("Reward", rewardSchema);
+module.exports = mongoose.model("Tracker", trackerSchema);

@@ -11,6 +11,6 @@ const RewardBoard = () => {
             <Reward />
         </StyledBoard>
     )
-}
+};
 
-export default RewardBoard
+export default RewardBoard;

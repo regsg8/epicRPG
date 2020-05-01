@@ -3,9 +3,9 @@ const app = express();
 require('dotenv').config()
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const expressJwt = require('express-jwt');
+//const expressJwt = require('express-jwt');
 const PORT = process.env.PORT || 4300;
-const secret = process.env.SECRET || "November Evergreen Victor Ember React";
+//const secret = process.env.SECRET || "November Evergreen Victor Ember React";
 const path = require('path');
 
 //Global middleware

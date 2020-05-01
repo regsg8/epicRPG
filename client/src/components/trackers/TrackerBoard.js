@@ -10,6 +10,6 @@ const TrackerBoard = () => {
             <Tracker />
         </StyledBoard>
     )
-}
+};
 
-export default TrackerBoard
+export default TrackerBoard;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledBoard } from '../../elements/index';
-import Jar from './Jar'
+import Jar from './Jar';
 
 const JarBoard = () => {
     return (
@@ -9,6 +9,6 @@ const JarBoard = () => {
             <Jar />
         </StyledBoard>
     )
-}
+};
 
-export default JarBoard
+export default JarBoard;
