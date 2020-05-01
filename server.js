@@ -3,10 +3,13 @@ const app = express();
 require('dotenv').config()
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-//const expressJwt = require('express-jwt');
+//const expressJwt = require('express-jwt'); FIXME
 const PORT = process.env.PORT || 4300;
-//const secret = process.env.SECRET || "November Evergreen Victor Ember React";
+//const secret = process.env.SECRET || "November Evergreen Victor Ember React"; FIXME
 const path = require('path');
+const trackerRoutes = require("./routes/trackerRoutes");
+const jarRoutes = require("./routes/jarRoutes");
+const rewardRoutes = require("./routes/rewardRoutes");
 
 //Global middleware
 app.use(express.json());
@@ -24,6 +27,12 @@ mongoose.connect(
 );
 
 //Routes
+//FIXME add user login/register routes
+//FIXME add jwt verification to api routes
+// main resource routes
+app.use("/api/trackers", trackerRoutes);
+app.use("/api/jars", jarRoutes);
+app.use("/api/rewards", rewardRoutes);
 
 //Error Handler
 app.use((err, req, res, next) => {
