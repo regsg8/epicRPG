@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Jar = () => {
+const Jar = (props) => {
     return (
         <div>
-            Jar Filler
+            <div>{props.name}</div>
+            <div>{props.maxPoints}</div>
         </div>
     )
 }

@@ -11,10 +11,25 @@ class Main extends Component {
                 {   
                     name: "Test Tracker Main",
                     points: 10,
+                    jar: "Health Jar"
                 },
                 {
                     name: "Other Tracker",
                     points: 15,
+                    jar: "Health Jar"
+                }
+            ],
+            jars: [
+                {
+                    name: "Health Jar",
+                    maxPoints: 1000
+                }
+            ],
+            rewards: [
+                {
+                    name: "2 hours of video games",
+                    jar: "Health Jar",
+                    points: 100
                 }
             ],
             testText: "Test Text Main"
@@ -36,8 +51,8 @@ class Main extends Component {
         return (
         <div style={styles.main}>
            <TrackerBoard {...this.state}/>
-           <JarBoard />
-           <RewardBoard />
+           <JarBoard {...this.state}/>
+           <RewardBoard {...this.state}/>
         </div>
         )
     };

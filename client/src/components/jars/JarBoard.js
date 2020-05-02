@@ -2,11 +2,17 @@ import React from 'react';
 import { StyledBoard } from '../../elements/index';
 import Jar from './Jar';
 
-const JarBoard = () => {
+const JarBoard = (props) => {
+
+    const mappedJars = props.jars.map((item) => {
+        return (
+            <Jar {...item} key={item._id} />
+        )
+    });
+
     return (
         <StyledBoard>
-            <Jar />
-            <Jar />
+            {mappedJars[0] ? mappedJars : "No available Jars" }
         </StyledBoard>
     )
 };

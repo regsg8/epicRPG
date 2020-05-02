@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const jarSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     maxPoints: {
         type: Number,

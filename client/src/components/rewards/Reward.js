@@ -1,10 +1,12 @@
 import React from 'react';
+import { StyledReward } from "../../elements/index";
 
-const Reward = () => {
+const Reward = (props) => {
     return (
-        <div>
-            Reward Filler
-        </div>
+        <StyledReward>
+            <div>{props.name}</div>
+            <div>{props.points}</div>
+        </StyledReward>
     )
 }
 

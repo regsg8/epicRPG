@@ -16,3 +16,7 @@ export const StyledDiv = styled.div`
 export const StyledTracker = styled(StyledDiv)`
     color: red;
 `;
+
+export const StyledReward = styled(StyledDiv)`
+    color: green
+`;
