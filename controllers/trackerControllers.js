@@ -23,17 +23,18 @@ const getTrackerById = async (req, res, next) => {
 };
 
 const editTracker = async (req, res, next) => {
-    try {
-        const updatedTracker = await Tracker.findOneAndUpdate(
-            { _id = req.params._id },  //FIXME add query check against user { _id: req.params._id, user: req.user._id }
-            req.body,
-            { new: true }
-        );
-        return res.status(200).send(updatedTracker);
-    } catch (err) {
-        res.status(500);
-        next(err);
-    }
+    console.log("Fix edit Tracker")
+    // try {
+    //     const updatedTracker = await Tracker.findOneAndUpdate(
+    //         { _id = req.params._id },  //FIXME add query check against user { _id: req.params._id, user: req.user._id }
+    //         req.body,
+    //         { new: true }
+    //     );
+    //     return res.status(200).send(updatedTracker);
+    // } catch (err) {
+    //     res.status(500);
+    //     next(err);
+    // }
 };
 
 const postTracker = async (req, res, next) => {

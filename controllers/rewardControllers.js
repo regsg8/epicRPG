@@ -23,17 +23,18 @@ const getRewardById = async (req, res, next) => {
 };
 
 const editReward = async (req, res, next) => {
-    try {
-        const updatedReward = await Reward.findOneAndUpdate(
-            { _id = req.params._id },  //FIXME add query check against user { _id: req.params._id, user: req.user._id }
-            req.body,
-            { new: true }
-        );
-        return res.status(200).send(updatedReward);
-    } catch (err) {
-        res.status(500);
-        next(err);
-    }
+    console.log("fix edit reward")
+    // try {
+    //     const updatedReward = await Reward.findOneAndUpdate(
+    //         { _id = req.params._id },  //FIXME add query check against user { _id: req.params._id, user: req.user._id }
+    //         req.body,
+    //         { new: true }
+    //     );
+    //     return res.status(200).send(updatedReward);
+    // } catch (err) {
+    //     res.status(500);
+    //     next(err);
+    // }
 };
 
 const postReward = async (req, res, next) => {

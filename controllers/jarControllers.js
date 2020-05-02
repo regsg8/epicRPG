@@ -23,17 +23,18 @@ const getJarById = async (req, res, next) => {
 };
 
 const editJar = async (req, res, next) => {
-    try {
-        const updatedJar = await Jar.findOneAndUpdate(
-            { _id = req.params._id },  //FIXME add query check against user { _id: req.params._id, user: req.user._id }
-            req.body,
-            { new: true }
-        );
-        return res.status(200).send(updatedJar);
-    } catch (err) {
-        res.status(500);
-        next(err);
-    }
+    console.log("fix edit jar")
+    // try {
+    //     const updatedJar = await Jar.findOneAndUpdate(
+    //         { _id = req.params._id },  //FIXME add query check against user { _id: req.params._id, user: req.user._id }
+    //         req.body,
+    //         { new: true }
+    //     );
+    //     return res.status(200).send(updatedJar);
+    // } catch (err) {
+    //     res.status(500);
+    //     next(err);
+    // }
 };
 
 const postJar = async (req, res, next) => {

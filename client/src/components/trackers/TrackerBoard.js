@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledBoard } from '../../elements/index';
 import Tracker from './Tracker';
-import { Consumer } from '../../index';
 
 const TrackerBoard = (props) => {
 

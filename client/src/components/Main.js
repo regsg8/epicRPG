@@ -8,7 +8,8 @@ class Main extends Component {
         super();
         this.state = {
             trackers: [
-                {   name: "Test Tracker Main",
+                {   
+                    name: "Test Tracker Main",
                     points: 10,
                 },
                 {
