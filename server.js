@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 4300;
 //const secret = process.env.SECRET || "November Evergreen Victor Ember React"; FIXME
 const path = require('path');
 const trackerRoutes = require("./routes/trackerRoutes");
-const jarRoutes = require("./routes/jarRoutes");
-const rewardRoutes = require("./routes/rewardRoutes");
+const jarRoutes = require('./routes/jarRoutes');
+//const rewardRoutes = require("./routes/rewardRoutes");
 
 //Global middleware
 app.use(express.json());
@@ -31,8 +31,10 @@ mongoose.connect(
 //FIXME add jwt verification to api routes
 // main resource routes
 app.use("/api/trackers", trackerRoutes);
-app.use("/api/jars", jarRoutes);
-app.use("/api/rewards", rewardRoutes);
+app.use("/api/jars", jarRoutes); 
+//app.use("/api/rewards", rewardRoutes);
+//app.use("/jartest", require('./routes/testRoutes'));             //FIXME
+
 
 //Error Handler
 app.use((err, req, res, next) => {
