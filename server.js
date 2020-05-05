@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4300;
 const path = require('path');
 const trackerRoutes = require("./routes/trackerRoutes");
 const jarRoutes = require('./routes/jarRoutes');
-//const rewardRoutes = require("./routes/rewardRoutes");
+const rewardRoutes = require("./routes/rewardRoutes");
 
 //Global middleware
 app.use(express.json());
@@ -32,7 +32,7 @@ mongoose.connect(
 // main resource routes
 app.use("/api/trackers", trackerRoutes);
 app.use("/api/jars", jarRoutes); 
-//app.use("/api/rewards", rewardRoutes);
+app.use("/api/rewards", rewardRoutes);
 //app.use("/jartest", require('./routes/testRoutes'));             //FIXME
 
 

@@ -11,8 +11,7 @@ class Main extends Component {
         this.state = {
             trackers: [],
             jars: [],
-            rewards: [],
-            testText: "Test Text Main"
+            rewards: []
         };
     };
 
